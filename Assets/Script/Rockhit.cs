@@ -5,12 +5,13 @@ using UnityEngine;
 public class Rockhit : MonoBehaviour
 {
     public string monster;
-    public GameObject Ground;
+    //public GameObject Ground;
+    public string Ground;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == Ground.gameObject) //¶¥¿¡ ¸ÂÀ»¶§
+        if (collision.gameObject.name == Ground) //¶¥¿¡ ¸ÂÀ»¶§
         {
             Destroy(this.gameObject);
         }
@@ -21,5 +22,7 @@ public class Rockhit : MonoBehaviour
             collision.gameObject.SetActive(false);
 
         }
+
+        Destroy(this.gameObject, 5f);
     }
 }
