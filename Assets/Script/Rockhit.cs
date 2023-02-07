@@ -7,8 +7,12 @@ public class Rockhit : MonoBehaviour
     public string monster;
     //public GameObject Ground;
     public string Ground;
+    public static bool mosterdie = false;
 
-
+    private void Start()
+    {
+        mosterdie = false;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == Ground) //¶¥¿¡ ¸ÂÀ»¶§
@@ -20,6 +24,7 @@ public class Rockhit : MonoBehaviour
         {
             Destroy(this.gameObject);
             collision.gameObject.SetActive(false);
+            mosterdie = true;
 
         }
 
