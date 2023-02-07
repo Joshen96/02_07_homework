@@ -9,6 +9,9 @@ public class UIkeyimage : MonoBehaviour
     public Image key2;
     public Image key3;
     public Image killmonster;
+    public Image gameclear;
+    public Image replay;
+
 
     private void Start()
     {
@@ -16,6 +19,9 @@ public class UIkeyimage : MonoBehaviour
         key2.GetComponent<Image>().enabled = false;
         key3.GetComponent<Image>().enabled = false;
         killmonster.GetComponent<Image>().enabled = false;
+        gameclear.GetComponent<Image>().enabled = false;
+        replay.GetComponent<Image>().enabled = false;
+
     }
 
     // Update is called once per frame
@@ -46,6 +52,11 @@ public class UIkeyimage : MonoBehaviour
             killmonster.GetComponent<Image>().enabled = true;
         }
 
+        if (Door_clear.uIclear == true)
+        {
+            gameclear.GetComponent<Image>().enabled = true;
+            replay.GetComponent<Image>().enabled = true;
+        }
 
 
   

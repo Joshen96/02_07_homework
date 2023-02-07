@@ -11,7 +11,7 @@ public class Rockhit : MonoBehaviour
 
     private void Start()
     {
-        mosterdie = false;
+        //mosterdie = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,6 +25,7 @@ public class Rockhit : MonoBehaviour
             collision.gameObject.SetActive(false);
             mosterdie = true;
             Destroy(this.gameObject);
+            Debug.Log("몬스터 잡음" + mosterdie);
         }
 
         Destroy(this.gameObject, 5f);
