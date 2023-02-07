@@ -22,10 +22,9 @@ public class Rockhit : MonoBehaviour
 
         if (collision.gameObject.name == monster) //몬스터에 맞을때 이때 몬스터 클리어 기록 해야함
         {
-            Destroy(this.gameObject);
             collision.gameObject.SetActive(false);
             mosterdie = true;
-
+            Destroy(this.gameObject);
         }
 
         Destroy(this.gameObject, 5f);
